@@ -4,7 +4,11 @@
   "description": "Free Range Testers Course",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "test:run-chrome": "cypress run --headless --browser chrome",
+    "test:run-firefox": "cypress run --headless --browser firefox",
+    "test:run-electron": "cypress run --headless --browser electron",
+    "test:run-all": "npm run test:run-chrome && npm run test:run-firefox && npm run test:run-electron"
   },
   "author": "Santiago Bernal",
   "license": "ISC",

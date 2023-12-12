@@ -1,5 +1,11 @@
-/// <reference types ="Cypress" />
+/// <reference types = "Cypress" />
 
-describe("", () => {
-  it("", () => {});
+describe("Home de www.freerangetesters.com", () => {
+  beforeEach(() => {
+    cy.visit("https://www.freerangetesters.com/");
+  });
+
+  it("ahould have a title", () => {
+    cy.title().should("include", "Free Range Testers");
+  });
 });

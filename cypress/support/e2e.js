@@ -14,7 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+
+Cypress.on("uncaught:exception", () => {
+  // returning false prevent cypress from failing test
+  return false;
+});
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
